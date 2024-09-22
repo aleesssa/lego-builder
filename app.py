@@ -20,8 +20,10 @@ def to_base64(uploaded_file):
 
 if uploaded_file is not None:
     b64_img = to_base64(uploaded_file)
+    st.image(uploaded_file)
 elif picture is not None:
     b64_img = to_base64(picture)
+    st.image(picture)
 
 
 # response = model.generate_content(["This is the picture", PIL.Image.open("lego.jpg")])
