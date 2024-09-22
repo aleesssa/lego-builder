@@ -66,7 +66,7 @@ if add_parts:
     budget = st.number_input("Enter your budget for additional parts (RM):")
     prompt_add = f"""You are allowed to add additional parts to the lego model besides the ones that have been provided. 
                     However, take note of the price of each additional part and make sure the total cost should not be greater than RM{budget}.
-                    State the additional parts required and the total cost of additional parts.
+                    State the overall list of parts required, state which parts are additional and its cost
                     """
 else:
     prompt_add = "You are NOT allowed to add additional parts to the lego model besides the ones provided."
