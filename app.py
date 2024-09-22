@@ -6,7 +6,9 @@ import requests
 
 # INITIALIZE AI models
 client = OpenAI(api_key = st.secrets["OPENAI_API_KEY"])
-# st.title("LEGO Builder")
+
+
+st.title("LEGO Builder")
 
 uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
 picture = st.camera_input("Take a picture")
