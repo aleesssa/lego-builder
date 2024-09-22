@@ -75,6 +75,7 @@ system_prompt = f"""
         You will be provided with a list of lego parts and their quantities.
         You are tasked to generate a lego model together with a step-by-step instruction on how to build it.
         Ensure that the design is physically feasible, using only standard LEGO's assembly logic.
+        Don't give output in JSON
         {prompt_add}
         """
 
