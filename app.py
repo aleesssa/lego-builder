@@ -42,7 +42,8 @@ def analyzeParts():
                     'text' : """
                                 Analyze the lego parts in the image given. 
                                 Identify the type of each lego parts and their quantity.
-                                The output should be in JSON format. lego parts(type, quantity)                           """
+                                Give the list of the type of lego parts and its quantity
+                                """
                 },
                 {
                     'type' : 'image_url',
@@ -75,7 +76,6 @@ system_prompt = f"""
         You will be provided with a list of lego parts and their quantities.
         You are tasked to generate a lego model together with a step-by-step instruction on how to build it.
         Ensure that the design is physically feasible, using only standard LEGO's assembly logic.
-        Don't give output in JSON
         {prompt_add}
         """
 
@@ -85,7 +85,6 @@ def legoBuilder(legoParts, theme):
         model = 'gpt-4o-mini',
         messages = [
             {'role' : 'system', 'content' : system_prompt},
-            {'role' : 'user', 'content' : f"""Here is the lego parts: {legoParts}
                                                 Here is the theme: {theme}
                                             """}
         ]
