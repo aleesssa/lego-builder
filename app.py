@@ -42,12 +42,12 @@ def analyzeParts():
                     'text' : """
                                 Analyze the lego parts in the image given. 
                                 Identify the type of each lego parts and their quantity.
-                                Give the list of the type of lego parts and its quantity
+                                Give the list of the type of lego parts and its quantity 
                                 """
                 },
                 {
                     'type' : 'image_url',
-                    'image_url' : { 'url' :f'data:image/png;base64,{b64_img}', 'detail':'low'}
+                    'image_url' : { 'url' :f'data:image/png;base64,{b64_img}'}
                 }
             ]
             }
@@ -85,6 +85,7 @@ def legoBuilder(legoParts, theme):
         model = 'gpt-4o-mini',
         messages = [
             {'role' : 'system', 'content' : system_prompt},
+            {'role' : 'user', 'content' : f"""Here are the lego parts: {legoParts}
                                                 Here is the theme: {theme}
                                             """}
         ]
